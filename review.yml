@@ -1,0 +1,121 @@
+aid: tempus
+name: Tempus
+review:
+  question: Does Tempus expose a public, self-serve developer portal, downloadable OpenAPI, or an anonymously reachable FHIR CapabilityStatement?
+  answer: false
+  date: '2026-07-24'
+  reviewer: API Evangelist
+  homeMarket: United States
+findings:
+  summary: |
+    Tempus AI, Inc. (formerly Tempus Labs), headquartered in Chicago, Illinois
+    (NASDAQ: TEM), is an AI-enabled precision medicine and genomic diagnostics
+    company. Its technical surface is delivered as gated provider and partner
+    integrations, not a public self-serve developer program. No public developer
+    portal, downloadable OpenAPI/Swagger, or anonymously reachable FHIR
+    CapabilityStatement (/metadata) or SMART-on-FHIR (.well-known/smart-configuration)
+    was found during this review. Provider access is via Tempus Hub (order tests /
+    view results), and system integration is via Tempus Edge, which the company
+    describes as bidirectional HL7, FHIR, API, and PACS connectivity into EHRs such
+    as Epic, Oracle Health / Cerner, and OncoEMR. Tempus Lens (lens.tempus.ai) is a
+    login-gated agentic-AI SaaS platform for oncology drug development over
+    de-identified multimodal real-world data. This is an honest gated-but-marketed
+    integration surface: real, named products exist and use healthcare standards, but
+    no machine-readable contract is publicly published for anonymous consumption.
+  developerPortal:
+    url: ""
+    confirmed: false
+    note: |
+      No first-party developer portal confirmed. Probed developer.tempus.com,
+      docs.tempus.com, api.tempus.com, fhir.tempus.com — all fail to resolve (curl
+      exit / HTTP 000). The .tempus.ai equivalents (developer/docs/api/fhir) return
+      HTTP 429 from a shared edge, consistent with a wildcard rate-limiter rather
+      than confirmed developer content, so none is claimed as a portal. lens.tempus.ai
+      returns HTTP 200 but is a login-gated application, not a developer portal.
+  fhirCapabilityStatement:
+    captured: false
+    version: null
+    resources: []
+    note: |
+      No FHIR CapabilityStatement or metadata document was retrievable anonymously.
+      api.tempus.com/metadata and fhir.tempus.com/metadata do not resolve.
+      www.tempus.com/.well-known/smart-configuration returned HTTP 429 (edge
+      throttle), not a served SMART configuration. Tempus markets FHIR as one of the
+      transports used by Tempus Edge for EHR integration, but the FHIR endpoint is
+      partner-provisioned and no public conformance resource was found.
+  downloadableSpecs:
+    count: 0
+    provenance: []
+    note: No OpenAPI/Swagger or FHIR JSON was harvested; none is publicly published.
+  authModel:
+    scheme: gated
+    smartOnFhir: unknown
+    scopes: []
+    note: |
+      No public authentication documentation. Integration is provisioned through
+      provider/partner onboarding (Tempus Hub accounts and Tempus Edge integration
+      engagements). SMART-on-FHIR scopes, OAuth2 flows, or API keys are not publicly
+      documented for anonymous developers.
+  standardsConformance:
+    usCore: unstated
+    ukCore: not-applicable
+    auCore: not-applicable
+    daVinci: unstated
+    carin: unstated
+    note: |
+      Tempus references HL7 and FHIR in its EHR-integration and data-model marketing,
+      but publishes no public implementation-guide conformance claim (US Core / Da
+      Vinci / CARIN) that could be verified.
+  gatedVsSelfServe: gated
+  companyFacts:
+    legalName: Tempus AI, Inc.
+    formerName: Tempus Labs, Inc.
+    founded: '2015'
+    founder: Eric Lefkofsky
+    headquarters: Chicago, Illinois, United States
+    ticker: 'NASDAQ: TEM'
+    products:
+    - Tempus Hub (provider ordering and results portal)
+    - Tempus Edge (EHR integration gateway — HL7 / FHIR / API / PACS)
+    - Tempus Lens (agentic-AI oncology drug-development platform)
+    - Tempus One (clinical AI assistant)
+    - Real-World Data / Tempus+ (de-identified multimodal RWD for life sciences)
+    assays:
+    - Tempus xT (solid-tumor DNA panel)
+    - Tempus xF (cell-free DNA liquid biopsy)
+    - Tempus xG (germline panel)
+    - Whole-transcriptome RNA sequencing
+transports:
+- protocol: REST
+  scheme: https
+  documented: false
+  note: Provider and partner integrations only; no public REST API reference published.
+- protocol: FHIR
+  scheme: https
+  documented: false
+  note: Marketed as a Tempus Edge transport for EHR integration; endpoint is partner-provisioned, no public CapabilityStatement.
+- protocol: HL7
+  scheme: mllp/other
+  documented: false
+  note: Listed as a Tempus Edge interface for EHR connectivity; not publicly documented.
+sources:
+- url: https://www.tempus.com/solutions/ehr-integration/
+  type: Documentation
+  note: EHR integration via Tempus Edge; HL7 / FHIR / API / PACS into Epic, Oracle Health, OncoEMR. HTTP 429 edge throttle on direct fetch; confirmed via search indexing.
+- url: https://www.tempus.com/solutions/hub/
+  type: Documentation
+  note: Tempus Hub provider portal to order tests and view genomic results.
+- url: https://lens.tempus.ai
+  type: Documentation
+  note: Tempus Lens agentic-AI platform; HTTP 200, login-gated SaaS (not a developer portal).
+- url: https://github.com/tempuslabs
+  type: GitHubOrganization
+  note: HTTP 200; org website is tempus.com. Public repos are infrastructure/auth tooling only — no API, FHIR, SDK, or OpenAPI repos.
+- url: https://en.wikipedia.org/wiki/Tempus_AI
+  type: Reference
+  note: Company facts — founded 2015 by Eric Lefkofsky, Chicago IL, NASDAQ TEM (IPO June 2024), oncology genomics + AI.
+notes: |
+  Probing was constrained by an aggressive edge rate-limiter: www.tempus.com and its
+  paths returned HTTP 429 to both curl and WebFetch regardless of path, so page
+  existence for tempus.com URLs was confirmed via search-engine indexing rather than
+  a live 200. Subdomains under tempus.com (developer/docs/api/fhir) do not resolve.

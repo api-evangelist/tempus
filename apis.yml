@@ -1,0 +1,119 @@
+aid: tempus
+url: https://raw.githubusercontent.com/api-evangelist/tempus/refs/heads/main/apis.yml
+name: Tempus
+kind: company
+description: >-
+  Tempus AI, Inc. (formerly Tempus Labs) is an AI-enabled precision medicine and
+  genomic diagnostics company founded in 2015 by Eric Lefkofsky and headquartered in
+  Chicago, Illinois (NASDAQ: TEM). Tempus has assembled one of the world's largest
+  libraries of clinical and molecular data and runs a next-generation-sequencing lab
+  offering oncology assays such as Tempus xT (solid-tumor DNA panel), xF (cell-free
+  DNA liquid biopsy), xG (germline), and whole-transcriptome RNA, expanding from
+  oncology into cardiology, neuropsychiatry, radiology, and infectious disease. For
+  its United States home market its technical surface is delivered as partner and
+  provider integrations rather than a public self-serve developer program: Tempus Hub
+  (a provider portal to order tests and view genomic results), EHR integration via
+  Tempus Edge (bidirectional HL7, FHIR, API, and PACS interfaces into Epic, Oracle
+  Health / Cerner, OncoEMR, and other EHRs), the Tempus Lens agentic-AI platform for
+  oncology drug development, Tempus One clinical assistant, and de-identified
+  multimodal real-world-data collaborations for life sciences. As of this review no
+  public developer portal, downloadable OpenAPI, or anonymously reachable FHIR
+  CapabilityStatement was found; integration is gated behind partner and provider
+  onboarding.
+accessModel:
+  pricing: enterprise
+  onboarding: partner
+  trial: false
+  try_now: false
+  public: false
+  label: Enterprise · Partner / provider integration (gated)
+  confidence: medium
+  source:
+  - review
+  generated: '2026-07-24'
+  method: reviewed
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Healthcare
+- United States
+- Genomics
+- Precision Medicine
+- Clinical AI
+- Oncology
+- FHIR
+- HL7
+- EHR
+- Interoperability
+- Life Sciences
+- Real-World Data
+created: '2026-07-24'
+modified: '2026-07-24'
+specificationVersion: '0.19'
+apis:
+- aid: tempus:tempus-ehr-integration
+  name: Tempus EHR Integration (Tempus Edge)
+  description: >-
+    Tempus Edge is a secure gateway that establishes bidirectional interfaces with
+    provider EHRs using HL7, FHIR, API, and PACS connectivity so genomic test orders
+    and results flow directly inside the clinical workflow of systems such as Epic,
+    Oracle Health / Cerner, and OncoEMR. Access is provider/partner onboarded rather
+    than a public self-serve API; no downloadable OpenAPI or public FHIR
+    CapabilityStatement is published as of this review.
+  humanURL: https://www.tempus.com/solutions/ehr-integration/
+  tags:
+  - EHR
+  - FHIR
+  - HL7
+  - Interoperability
+  properties:
+  - type: Documentation
+    url: https://www.tempus.com/solutions/ehr-integration/
+  - type: Documentation
+    url: https://www.tempus.com/oncology/ehr-integration/
+- aid: tempus:tempus-hub
+  name: Tempus Hub
+  description: >-
+    Tempus Hub is a secure online portal for providers to order genomic and molecular
+    tests, track order status, and view comprehensive patient results, available on
+    desktop and mobile. It is an authenticated provider application; no public API
+    reference is documented.
+  humanURL: https://www.tempus.com/solutions/hub/
+  tags:
+  - Genomics
+  - Oncology
+  - Portal
+  properties:
+  - type: Documentation
+    url: https://www.tempus.com/solutions/hub/
+  - type: Documentation
+    url: https://www.tempus.com/order/
+- aid: tempus:tempus-lens
+  name: Tempus Lens Platform
+  description: >-
+    Tempus Lens is an agentic-AI platform for oncology drug development that combines
+    a large de-identified multimodal real-world dataset with Tempus oncology
+    foundation models, AI agents, and scientific workflows. It is commercially
+    available as a login-gated SaaS application at lens.tempus.ai; no public developer
+    API is documented.
+  humanURL: https://lens.tempus.ai
+  tags:
+  - Clinical AI
+  - Real-World Data
+  - Life Sciences
+  properties:
+  - type: Documentation
+    url: https://www.tempus.com/life-sciences/real-world-data/
+common:
+- type: Website
+  url: https://www.tempus.com/
+- type: GitHubOrganization
+  url: https://github.com/tempuslabs
+- type: Documentation
+  url: https://www.tempus.com/resources/document-library/
+- type: GettingStarted
+  url: https://www.tempus.com/providers/
+- type: Blog
+  url: https://www.tempus.com/news/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
