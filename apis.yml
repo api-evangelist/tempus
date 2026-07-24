@@ -104,6 +104,8 @@ apis:
   - type: Documentation
     url: https://www.tempus.com/life-sciences/real-world-data/
 common:
+- type: DomainSecurity
+  url: security/tempus-domain-security.yml
 - type: Website
   url: https://www.tempus.com/
 - type: GitHubOrganization
@@ -114,6 +116,8 @@ common:
   url: https://www.tempus.com/providers/
 - type: Blog
   url: https://www.tempus.com/news/
+- type: LLMsTxt
+  url: llms/tempus-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

@@ -1,0 +1,26 @@
+# Tempus AI
+
+> Tempus AI, Inc. (NASDAQ: TEM, formerly Tempus Labs) is an AI-enabled precision medicine and genomic diagnostics company founded in 2015 and headquartered in Chicago, Illinois. It operates a next-generation-sequencing laboratory (oncology assays such as Tempus xT, xF, xG, and whole-transcriptome RNA) and one of the largest libraries of clinical and molecular data, expanding from oncology into cardiology, neuropsychiatry, radiology, and infectious disease. Its technical surface is delivered as gated partner and provider integrations rather than a public self-serve developer program: no public developer portal, downloadable OpenAPI, or anonymously reachable FHIR CapabilityStatement was found as of this profile (2026-07-24). Integration is onboarded behind partner and provider agreements.
+
+## Solutions
+- [Tempus EHR Integration (Tempus Edge)](https://www.tempus.com/solutions/ehr-integration/): Secure gateway that establishes bidirectional interfaces with provider EHRs using HL7, FHIR, API, and PACS connectivity into Epic, Oracle Health / Cerner, OncoEMR, and others. Provider/partner onboarded; no public OpenAPI or FHIR CapabilityStatement published.
+- [Tempus Hub](https://www.tempus.com/solutions/hub/): Authenticated provider portal to order genomic/molecular tests, track order status, and view patient results on desktop and mobile. No public API reference documented.
+- [Tempus Lens Platform](https://lens.tempus.ai): Login-gated agentic-AI SaaS for oncology drug development combining a de-identified multimodal real-world dataset with Tempus oncology foundation models, AI agents, and scientific workflows.
+
+## Docs
+- [Providers / Getting Started](https://www.tempus.com/providers/): Provider-facing entry point for ordering and onboarding.
+- [Order a Test](https://www.tempus.com/order/): Test ordering surface for providers.
+- [EHR Integration (Oncology)](https://www.tempus.com/oncology/ehr-integration/): Oncology-specific EHR integration overview.
+- [Real-World Data / Life Sciences](https://www.tempus.com/life-sciences/real-world-data/): De-identified multimodal real-world-data collaborations for life sciences.
+- [Document Library](https://www.tempus.com/resources/document-library/): Published clinical and product documentation.
+
+## News
+- [Tempus News](https://www.tempus.com/news/): Company news and announcements.
+
+## Optional
+- [Website](https://www.tempus.com/)
+- [GitHub Organization (tempuslabs)](https://github.com/tempuslabs): Internal engineering tooling only (no published API specifications).
+
+## Access
+- Pricing: enterprise. Onboarding: partner / provider integration (gated). No public trial or self-serve sign-up.
+- No public OpenAPI, GraphQL, MCP server, AsyncAPI, first-party SDK, or reachable /.well-known discovery documents were found as of 2026-07-24; the main site is served behind a bot-protection checkpoint.
